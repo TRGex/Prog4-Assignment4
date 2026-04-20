@@ -5,18 +5,17 @@ using UnityEngine;
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class InhaleAT : ActionTask {
+	public class ArrivedAT : ActionTask {
 
-		GameObject lizard;
+        GameObject neck;
 
-		public BBParameter<float> localWater;
-        public BBParameter<float> localShed;
-		public BBParameter<float> localMoveTimer;
+        public BBParameter<float> localMoveTimer;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
-			return null;
+            neck = GameObject.FindGameObjectWithTag("Neck");
+            return null;
 		}
 
 		//This is called once each time the task is enabled.
@@ -24,30 +23,21 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
 
-            lizard = GameObject.FindGameObjectWithTag("Lizard");
-        }
+			localMoveTimer.value = Random.Range(6, 16);
+
+			EndAction(true);
+		}
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-
-            localWater.value -= 1 * Time.deltaTime;
-            localShed.value -= 1 * Time.deltaTime;
-			localMoveTimer.value -= 1 * Time.deltaTime;
-
-            if (lizard.transform.localScale.y <= 1.4)
-			{
-				lizard.transform.localScale += new Vector3(0, 0.2f, 0) * Time.deltaTime;
-			}
-			else
-			{
-				EndAction();
-			}
+			
 		}
 
 		//Called when the task is disabled.
 		protected override void OnStop() {
-			
-		}
+
+            neck.transform.eulerAngles = Vector3.zero;
+        }
 
 		//Called when the task is paused.
 		protected override void OnPause() {

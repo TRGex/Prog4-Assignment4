@@ -11,6 +11,7 @@ namespace NodeCanvas.Tasks.Actions {
 
         public BBParameter<float> localWater;
         public BBParameter<float> localShed;
+        public BBParameter<float> localMoveTimer;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -32,6 +33,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 			localWater.value -= 1 * Time.deltaTime;
             localShed.value -= 1 * Time.deltaTime;
+            localMoveTimer.value -= 1 * Time.deltaTime;
 
             if (lizard.transform.localScale.y >= 1)
             {
