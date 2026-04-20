@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 342938462}
   m_Layer: 0
   m_Name: TailJoint
-  m_TagString: Untagged
+  m_TagString: Tail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 383944043}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3531,13 +3531,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedFSM":{"_value":1},"_position":{"x":422.6667,"y":307.3333},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_nestedFSM":{"_value":2},"_name":"Drink","_position":{"x":136.9308,"y":539.3298},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"localShed":{"_name":"Skin
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedFSM":{"_value":1},"_position":{"x":422.6667,"y":308.9736},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_nestedFSM":{"_value":2},"_name":"Drink","_position":{"x":136.9308,"y":539.3298},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"localShed":{"_name":"Skin
     shed","_targetVariableID":"d1ac6f90-ef35-4999-8e30-a396dbbd40be"},"lizard":3,"deadSkin":4,"$type":"NodeCanvas.Tasks.Actions.ShedSkinAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Shed
     Skin","_position":{"x":236.2269,"y":169.1126},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"localTarget":{"_name":"Target","_targetVariableID":"52d523b9-5703-41c6-b252-93079e3ac24f"},"$type":"NodeCanvas.Tasks.Actions.WanderAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Wander","_position":{"x":746.5981,"y":177.8337},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"},{"_actionList":{"executionMode":1,"actions":[{"localMoveTimer":{"_name":"Move
     Timer","_targetVariableID":"6d1eb741-c03c-4a9b-a257-0e723d16ee27"},"$type":"NodeCanvas.Tasks.Actions.ArrivedAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Reached
-    Location","_position":{"x":556.6308,"y":83.79797},"$type":"NodeCanvas.StateMachines.ActionState","$id":"4"},{"_nestedFSM":{"_value":5},"_name":"Defend","_position":{"x":711.7752,"y":775.5784},"$type":"NodeCanvas.StateMachines.NestedFSMState"},{"_nestedFSM":{"_value":6},"_name":"Run","_position":{"x":20.74765,"y":734.548},"$type":"NodeCanvas.StateMachines.NestedFSMState"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"localTarget":{"_name":"Target","_targetVariableID":"52d523b9-5703-41c6-b252-93079e3ac24f"},"$type":"NodeCanvas.Tasks.Actions.NavigateAT"}]},"_position":{"x":345.1126,"y":678.1586},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"localWater":{"_name":"Hydration","_targetVariableID":"1f6a2b8f-4380-49ee-a440-dfd439ae5ca7"},"$type":"NodeCanvas.Tasks.Conditions.ThirstyCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"localShed":{"_name":"Skin
+    Location","_position":{"x":556.6308,"y":83.79797},"$type":"NodeCanvas.StateMachines.ActionState","$id":"4"},{"_actionList":{"executionMode":1,"actions":[{"localTarget":{"_name":"Target","_targetVariableID":"52d523b9-5703-41c6-b252-93079e3ac24f"},"$type":"NodeCanvas.Tasks.Actions.RunAwayAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Run
+    Away","_position":{"x":683.6946,"y":527.7262},"$type":"NodeCanvas.StateMachines.ActionState","$id":"5"},{"_nestedFSM":{"_value":5},"_name":"Defend","_position":{"x":985.5007,"y":563.5037},"$type":"NodeCanvas.StateMachines.NestedFSMState"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"localTarget":{"_name":"Target","_targetVariableID":"52d523b9-5703-41c6-b252-93079e3ac24f"},"$type":"NodeCanvas.Tasks.Actions.NavigateAT"}]},"_position":{"x":164.987,"y":715.2433},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"localWater":{"_name":"Hydration","_targetVariableID":"1f6a2b8f-4380-49ee-a440-dfd439ae5ca7"},"$type":"NodeCanvas.Tasks.Conditions.ThirstyCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"localShed":{"_name":"Skin
     shed","_targetVariableID":"d1ac6f90-ef35-4999-8e30-a396dbbd40be"},"$type":"NodeCanvas.Tasks.Conditions.NeedToShedCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"localMoveTimer":{"_name":"Move
-    Timer","_targetVariableID":"6d1eb741-c03c-4a9b-a257-0e723d16ee27"},"$type":"NodeCanvas.Tasks.Conditions.MoveTimerCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"localWater":{"_name":"Hydration","_targetVariableID":"1f6a2b8f-4380-49ee-a440-dfd439ae5ca7"},"$type":"NodeCanvas.Tasks.Conditions.HydratedCT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"localTarget":{"_name":"Target","_targetVariableID":"52d523b9-5703-41c6-b252-93079e3ac24f"},"stoppingDistance":0.5,"$type":"NodeCanvas.Tasks.Conditions.TargetReachedCT"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+    Timer","_targetVariableID":"6d1eb741-c03c-4a9b-a257-0e723d16ee27"},"$type":"NodeCanvas.Tasks.Conditions.MoveTimerCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.PlayerDistanceCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"localWater":{"_name":"Hydration","_targetVariableID":"1f6a2b8f-4380-49ee-a440-dfd439ae5ca7"},"$type":"NodeCanvas.Tasks.Conditions.HydratedCT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"localTarget":{"_name":"Target","_targetVariableID":"52d523b9-5703-41c6-b252-93079e3ac24f"},"stoppingDistance":0.5,"$type":"NodeCanvas.Tasks.Conditions.TargetReachedCT"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"localTarget":{"_name":"Target","_targetVariableID":"52d523b9-5703-41c6-b252-93079e3ac24f"},"stoppingDistance":0.5,"$type":"NodeCanvas.Tasks.Conditions.TargetReachedCT"},"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 11400000, guid: ba295ce0624fe7545bc410731f7564e3, type: 2}
@@ -3545,13 +3546,12 @@ MonoBehaviour:
   - {fileID: 2100000, guid: e5f50d4072b534d40b6a63b4ef8a85fa, type: 2}
   - {fileID: 2100000, guid: 611a2a53e476994469b44b7c890cf8b7, type: 2}
   - {fileID: 11400000, guid: 61b78d4bfde2e554c81ae611eca8a24c, type: 2}
-  - {fileID: 11400000, guid: f2df9be6aa2c9af4595f5388b3473d63, type: 2}
   _boundGraphSource:
     _version: 3.41
     _category: 
     _comments: 
-    _translation: {x: 218.61443, y: 148.14922}
-    _zoomFactor: 0.6291908
+    _translation: {x: -59.84676, y: -149.10036}
+    _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
