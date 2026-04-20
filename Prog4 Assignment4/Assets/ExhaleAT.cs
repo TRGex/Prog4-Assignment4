@@ -9,6 +9,9 @@ namespace NodeCanvas.Tasks.Actions {
 
         GameObject lizard;
 
+        public BBParameter<float> localWater;
+        public BBParameter<float> localShed;
+
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
@@ -27,9 +30,12 @@ namespace NodeCanvas.Tasks.Actions {
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
 
+			localWater.value -= 1 * Time.deltaTime;
+            localShed.value -= 1 * Time.deltaTime;
+
             if (lizard.transform.localScale.y >= 1)
             {
-                lizard.transform.localScale -= new Vector3(0, 0.1f, 0) * Time.deltaTime;
+                lizard.transform.localScale -= new Vector3(0, 0.2f, 0) * Time.deltaTime;
             }
             else
             {
